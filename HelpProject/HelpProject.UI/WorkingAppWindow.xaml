@@ -1,0 +1,90 @@
+﻿<Window x:Class="HelpProject.UI.WorkingAppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelpProject.UI"
+        mc:Ignorable="d"
+        Title="Freelance App" Height="500" Width="646.965"
+  SizeToContent="WidthAndHeight">
+    <Grid Background="Beige" Margin="26,29,16.8,30.4">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="User Menu:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed"/>
+
+        <Button Margin="397,31,84,332" Content="Profile" Cursor="Hand" Click="Profile_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <TextBlock TextDecorations="Underline">
+                    <ContentPresenter />
+                    </TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="Navy" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Green" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Margin="287,31,230,342" Content="Your Tickets" Cursor="Hand" Click="Ticket_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <TextBlock TextDecorations="Underline">
+                    <ContentPresenter />
+                    </TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="#FFDD4F37" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Green" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Margin="179,31,328,332" Content="Your Chats" Cursor="Hand" Click="Chat_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <TextBlock TextDecorations="Underline">
+                    <ContentPresenter />
+                    </TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="#FF008014" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Green" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+       
+        <Grid Margin="27,0,24,23" Background="LavenderBlush" Height="276" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="252*" />
+
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Height="45" Margin="60,19,104.8,200" Width="300" RenderTransformOrigin="0.498,2.145">Welcome!</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Height="75" Margin="30,69,46.2,120" Width="411" RenderTransformOrigin="0.498,2.145">This is App for Freelance Fast Job. To start searching tickets click Search Button, please!</TextBlock >
+            <Button Content="Search Button" Height="73" HorizontalAlignment="Right" Margin="0,159,295.4,0" Name="button1" VerticalAlignment="Top" Width="169" Click="Search_Click" FontStyle="Italic" BorderBrush="#FF76DD20" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" RenderTransformOrigin="0.5,0.5"  >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="6.111"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
